@@ -1,2 +1,2 @@
 # pics-Top-Daily-Post-Twitter-Bot
-Twitter bot that creates an archive of the top daily pic (based on upvotes) from r/pics on Reddit.com
+The Reddit and Twitter API's are used to gather posting information. Among all of the libraries used, a couple include the Praw wrapper, which is used to easily communicate with the Reddit API, and the Tweepy library, which is used to communicate with the Twitter API. The credentials for both Reddit and Twitter are placed and accessed through another file for security purposes. The archive of posts can be seen at https://twitter.com/RedditTopPicBot.
