@@ -1,2 +1,4 @@
-# pics-Top-Daily-Post-Twitter-Bot
+# r/pics-Top-Daily-Post-Twitter-Bot
+Script that utilizes different libraries to locate the top post within the past 24 hours on the reddit.com subforum r/pics. The title, number of votes received, and source url of the returned post is stored and the post’s associated picture is written as a new .jpg file. The script then tweets the post on twitter.com to the Twitter account @RedditTopPicBot, creating an archive of the top daily pictures. The script is automated to be continuously running, returning the top post and sending out a tweet at 11:59 pm EDT every day.
+# Comments
 The Reddit and Twitter API's are used to gather posting information. Among all of the libraries used, a couple include the Praw wrapper, which is used to easily communicate with the Reddit API, and the Tweepy library, which is used to communicate with the Twitter API. The credentials for both Reddit and Twitter are placed and accessed through another file for security purposes. The archive of posts can be seen at https://twitter.com/RedditTopPicBot.
