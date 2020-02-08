@@ -3,9 +3,7 @@ import os
 import praw
 import reddit_twitter_config
 import requests
-import schedule
 import tweepy
-import time
 
 def reddit_connection():
 #Connects to pics subreddit
@@ -101,26 +99,11 @@ def send_tweet(post_dict):
             text_error = 'Error: No picture found'
             api.update_status(status=text_error)
 
-def task():
+def main():
 
     subreddit = reddit_connection()
     post_dict = get_post_info(subreddit)
     send_tweet(post_dict)
-    
-def main():
-
-    #Schedule script to run once a day at 11:59p Eastern Time
-    schedule.every().monday.at("22:59").do(task)
-    schedule.every().tuesday.at("22:59").do(task)
-    schedule.every().wednesday.at("22:59").do(task)
-    schedule.every().thursday.at("22:59").do(task)
-    schedule.every().friday.at("22:59").do(task)
-    schedule.every().saturday.at("22:59").do(task)
-    schedule.every().sunday.at("22:59").do(task)
-
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
     
 if __name__ == '__main__':
     main()
